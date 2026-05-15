@@ -1,0 +1,12 @@
+services:
+  cobol-build:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      # Fuentes montadas en tiempo de ejecución — los cambios se reflejan sin rebuild
+      - ./src:/build/src
+      # Los binarios compilados quedan en ./dist en tu máquina Windows
+      - ./dist:/build/dist
+      # build.py montado para que los cambios no requieran rebuild de imagen
+      - ./build.py:/build/build.py
