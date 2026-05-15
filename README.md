@@ -148,7 +148,7 @@ Binaries end up in `dist/`.
 Copy the entire `dist/` folder to the LPAR (binary + `lib/`):
 
 ```bash
-scp -r dist/ user@lpar:/store/programs/MYAPP/
+scp -r dist/ user@lpar:/store/programs/MRE/   # MRE = destination Linux folder on the LPAR
 ```
 
 Then on the LPAR:
@@ -160,7 +160,7 @@ export PGUSER=my-user
 export PGPASSWORD=my-password
 export PGPORT=5432          # optional, default 5432
 
-/store/programs/MYAPP/customers
+/store/programs/MRE/customers
 ```
 
 Expected output (without `--show-connection`):
@@ -350,7 +350,7 @@ Los binarios quedan en `dist/`.
 Copia la carpeta `dist/` completa al LPAR (binario + `lib/`):
 
 ```bash
-scp -r dist/ usuario@lpar:/store/programs/MIAPP/
+scp -r dist/ usuario@lpar:/store/programs/MRE/   # MRE = carpeta destino Linux en el LPAR
 ```
 
 Luego en el LPAR:
@@ -362,7 +362,7 @@ export PGUSER=mi-usuario
 export PGPASSWORD=mi-clave
 export PGPORT=5432          # opcional, default 5432
 
-/store/programs/MIAPP/clientes
+/store/programs/MRE/clientes
 ```
 
 Salida esperada (sin `--show-connection`):
